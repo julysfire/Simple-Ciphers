@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "691082729660",
+    "firebase_url": "https://simple-ciphers-aa434.firebaseio.com",
+    "project_id": "simple-ciphers-aa434",
+    "storage_bucket": "simple-ciphers-aa434.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:691082729660:android:db2d92f858b511f4",
+        "android_client_info": {
+          "package_name": "com.example.nonyahat.simpleciphers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "691082729660-is63u7ddjo30kbv8hpg3jsmgr3kcjvd8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nonyahat.simpleciphers",
+            "certificate_hash": "fb92c2903441b3f0dc46d243161a1d1105c6562c"
+          }
+        },
+        {
+          "client_id": "691082729660-apfdk018buadrpk95nfipuvn2c09b38o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6tm4KKVCqm2sUd7NpfuXSv7WSWmfZmzs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "691082729660-apfdk018buadrpk95nfipuvn2c09b38o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:691082729660:android:990d76e79d4a0790",
+        "android_client_info": {
+          "package_name": "com.julysfire.simpleciphers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "691082729660-u4ih8grk915eh7ffhcmtrjoiu42uq29n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.julysfire.simpleciphers",
+            "certificate_hash": "fb92c2903441b3f0dc46d243161a1d1105c6562c"
+          }
+        },
+        {
+          "client_id": "691082729660-apfdk018buadrpk95nfipuvn2c09b38o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6tm4KKVCqm2sUd7NpfuXSv7WSWmfZmzs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "691082729660-apfdk018buadrpk95nfipuvn2c09b38o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

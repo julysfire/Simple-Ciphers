@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.julysfire.simpleciphers.BaconianActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/inputString"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:textAlignment="center"
+                android:layout_below="@+id/textView"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:maxLength="2000"/>
+
+            <Button
+                android:id="@+id/buttonEncrypt"
+                android:layout_width="175dp"
+                android:layout_height="75dp"
+                android:text="Encrypt"
+                android:layout_marginTop="14dp"
+                android:layout_below="@+id/textView3"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:id="@+id/buttonDecrypt"
+                android:layout_width="175dp"
+                android:layout_height="75dp"
+                android:text="Decrypt"
+                android:layout_alignBaseline="@+id/buttonEncrypt"
+                android:layout_alignBottom="@+id/buttonEncrypt"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:id="@+id/outputText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textIsSelectable="true"
+                android:background="@drawable/back"
+                android:textSize="19dp"
+                android:gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/outputTextLabel"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/outputTextLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. Output"
+                android:textSize="15dp"
+                android:layout_marginTop="14dp"
+                android:gravity="center"
+                android:layout_below="@+id/buttonEncrypt"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="1. Enter the text that is to be encrypted or decypted."
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:text="2. Select if you want your text encrypted or decrpyted."
+                android:gravity="center"
+                android:layout_below="@+id/inputString"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="19dp" />
+
+            <Button
+                android:id="@+id/baconCopyButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="14dp"
+                android:text="Copy to clipboard"
+                android:layout_below="@id/outputText"
+                />
+        </RelativeLayout>
+    </ScrollView>
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        android:layout_below="@id/baconCopyButton"
+        ads:adUnitId="ca-app-pub-4179709266227495/6118881575">
+    </com.google.android.gms.ads.AdView>
+</LinearLayout>

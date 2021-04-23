@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.julysfire.simpleciphers.MainActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:id="@+id/mainrel"
+        android:layout_weight="1">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/caesarImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginStart="14dp"
+            android:layout_alignTop="@+id/baconianImage"
+            android:background="@drawable/caesar"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <Button
+            android:id="@+id/caesarButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="Caesar Cipher"
+            android:layout_alignLeft="@+id/caesarImage"
+            android:layout_alignStart="@+id/caesarImage"
+            android:layout_alignRight="@+id/caesarImage"
+            android:layout_alignEnd="@+id/caesarImage"
+            android:layout_below="@+id/caesarImage" />
+
+        <ImageView
+            android:id="@+id/atbashImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="71dp"
+            android:layout_below="@+id/caesarImage"
+            android:layout_alignLeft="@+id/caesarImage"
+            android:layout_alignStart="@+id/caesarImage"
+            android:background="@drawable/atbash"/>
+        <Button
+            android:id="@+id/atbashButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="Atbash Cipher"
+            android:layout_below="@+id/atbashImage"
+            android:layout_alignRight="@+id/atbashImage"
+            android:layout_alignEnd="@+id/atbashImage"
+            android:layout_alignLeft="@+id/atbashImage"
+            android:layout_alignStart="@+id/atbashImage" />
+
+        <ImageView
+            android:id="@+id/baconianImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="38dp"
+            android:background="@drawable/bacon"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/vignereImage"
+            android:layout_alignStart="@+id/vignereImage" />
+        <Button
+            android:id="@+id/baconianButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:text="Baconian Cipher"
+            android:layout_below="@+id/baconianImage"
+            android:layout_alignLeft="@+id/baconianImage"
+            android:layout_alignStart="@+id/baconianImage"
+            android:layout_alignRight="@+id/baconianImage"
+            android:layout_alignEnd="@+id/baconianImage" />
+
+        <ImageView
+            android:id="@+id/vignereImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignTop="@+id/atbashImage"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/vignere"/>
+        <Button
+            android:id="@+id/vignereButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="Vignère Cipher"
+            android:layout_below="@+id/vignereImage"
+            android:layout_alignRight="@+id/vignereImage"
+            android:layout_alignEnd="@+id/vignereImage"
+            android:layout_alignLeft="@+id/vignereImage"
+            android:layout_alignStart="@+id/vignereImage" />
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/hexdecimage"
+            android:background="@drawable/binaryascii"
+            android:layout_below="@+id/atbashButton"
+            android:layout_alignLeft="@+id/atbashButton"
+            android:layout_alignStart="@+id/atbashButton"
+            android:layout_marginTop="20dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:id="@+id/hexdecbinaryButton"
+            android:text="Hex/Decimal/binary"
+            android:layout_below="@+id/hexdecimage"
+            android:layout_alignLeft="@+id/hexdecimage"
+            android:layout_alignStart="@+id/hexdecimage"
+            android:layout_alignRight="@+id/hexdecimage"
+            android:layout_alignEnd="@+id/hexdecimage" />
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/teleimage"
+            android:background="@drawable/telemain"
+            android:layout_above="@+id/telephoneButton"
+            android:layout_alignLeft="@+id/telephoneButton"
+            android:layout_alignStart="@+id/telephoneButton" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:id="@+id/telephoneButton"
+            android:text="Telephone Cipher"
+            android:layout_alignLeft="@+id/vignereButton"
+            android:layout_alignStart="@+id/vignereButton"
+            android:layout_alignTop="@id/hexdecbinaryButton"
+            android:layout_alignBottom="@+id/hexdecbinaryButton"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/hexdecimage" />
+    </RelativeLayout>
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/realAd">
+    </com.google.android.gms.ads.AdView>
+</LinearLayout>
+

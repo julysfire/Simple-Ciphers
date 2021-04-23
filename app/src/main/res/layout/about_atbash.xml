@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:id="@+id/atbash1"
+                android:paddingTop="10dp"
+                android:text="The Atbash Cipher is a very old and ancient cipher with notes of use in a few bible verses.  Much like the Caesar Cipher, the Atbash Cipher is a very straight-forward substitution cipher.  Unlike the Caesar Cipher though, there is no movement along the alphabet by a set number.  With the Atbash Cipher, the substitution from the normal alphabet is in like with the alphabet in reverse."/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/atbashAlphabet"
+                android:background="@drawable/atbash_alphabet"
+                android:layout_below="@+id/atbash1"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/atbashFigure1"
+                android:layout_below="@id/atbashAlphabet"
+                android:text="Figure 1"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Encrypting"
+                android:textStyle="bold"
+                android:layout_below="@id/atbashFigure1"
+                android:paddingTop="10dp"
+                android:id="@+id/atbashEncrypting"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/atbash2"
+                android:layout_below="@+id/atbashEncrypting"
+                android:textSize="18dp"
+                android:text="Encrypting is a fairly simple process. The first thing to look at is the letter that is being encrypted. For this example, we will say 'K'.  To encrypt, all that needs to be done is to compare it to the reverse alphabet.  In this case, 'K' would turn into 'P'. "/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Decrypting"
+                android:textStyle="bold"
+                android:layout_below="@id/atbash2"
+                android:paddingTop="10dp"
+                android:id="@+id/atbashDecrypting"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/atbashDecrypting"
+                android:textSize="18dp"
+                android:id="@+id/atbash3"
+                android:text="Decrypting is much like encrypting yet in reverse order.  If we had the letter 'O', we look first at the reverse alphabet and compare it to the normal alphabet to get the letter 'L'."/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:id="@+id/atbash4"
+                android:layout_below="@id/atbash3"
+                android:paddingTop="15dp"
+                android:text="As you may have been able to tell, there is a catch with the Atbash Cipher.  When encrypting the letter K, we got P.  When decrypting the letter K, we also get P.  Because the alphabet's 26 positions are lined up, there will always be a perfect match between 2 different letters.  If you would like to learn more about the Atbash Cipher, feel free to click the link below."/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:id="@+id/atbashLink"
+                android:layout_below="@id/atbash4"
+                android:paddingTop="10dp"
+                android:text="https://en.wikipedia.org/wiki/Atbash"
+                android:autoLink="web"/>
+        </RelativeLayout>
+    </ScrollView>
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_below="@+id/atbashLink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-4179709266227495/6118881575">
+    </com.google.android.gms.ads.AdView>
+</LinearLayout>

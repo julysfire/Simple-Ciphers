@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/baconianText1"
+                android:textSize="18dp"
+                android:paddingTop="10dp"
+                android:text="The Baconian cipher is an example of a stenography rather then cryptography. Stenography hopes to conceal the message as well, more then just a cipher.  The Baconian Cipher was first devised by Francis Bacon in 1605.  To encrypt and decrypt messages with the Baconian Cipher, one must simply follow the substitution-like rules in the following figure."/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/baconian"
+                android:id="@+id/baconPicture"
+                android:layout_below="@+id/baconianText1"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/baconPicture"
+                android:text="Figure 1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/baconPicture"
+                android:id="@+id/baconText2"
+                android:textSize="18dp"
+                android:paddingTop="20dp"
+                android:text="While a rather easy cipher, I added it because I thought it would be interesting or funny to receive a encoded message using this method.  If you are intested in reading more about the Baconian Cipher or Stenography, feel free to click the link below."/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/baconText2"
+                android:textSize="18dp"
+                android:paddingTop="10dp"
+                android:id="@+id/baconLink"
+                android:text="https://en.wikipedia.org/wiki/Bacon%27s_cipher"
+                android:autoLink="web"/>
+        </RelativeLayout>
+    </ScrollView>
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_below="@+id/baconLink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-4179709266227495/6118881575">
+    </com.google.android.gms.ads.AdView>
+</LinearLayout>

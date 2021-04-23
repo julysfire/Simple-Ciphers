@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.julysfire.simpleciphers">
+
+    <!-- Version -->
+    <!-- V1.3 -->
+    <!--Added copy to clipboard button-->
+    <!--Added some fixes and improvements to the telephone cipher.-->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Simple Ciphers"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name="com.julysfire.simpleciphers.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.julysfire.simpleciphers.CaesarActivity"
+            android:label="Caesar Cipher"
+            android:parentActivityName="com.julysfire.simpleciphers.MainActivity" />
+        <activity android:name="com.julysfire.simpleciphers.AboutCaesarActivity"
+            android:parentActivityName="com.julysfire.simpleciphers.CaesarActivity"
+            android:label="About Caesar Cipher"/>
+
+
+        <activity android:name="com.julysfire.simpleciphers.AtbashActivity"
+            android:parentActivityName="com.julysfire.simpleciphers.MainActivity"
+            android:label="Atbash Cipher" />
+        <activity android:name="com.julysfire.simpleciphers.AboutAtbashActivity"
+            android:parentActivityName="com.julysfire.simpleciphers.AtbashActivity"
+            android:label="About Atbash Cipher"/>
+
+
+        <activity android:name="com.julysfire.simpleciphers.BaconianActivity"
+            android:parentActivityName="com.julysfire.simpleciphers.MainActivity"
+            android:label="Baconian Cipher"/>
+        <activity android:name="com.julysfire.simpleciphers.AboutBaconianActivity"
+            android:parentActivityName="com.julysfire.simpleciphers.BaconianActivity"
+            android:label="About Baconian Cipher"/>
+
+
+        <activity android:name="com.julysfire.simpleciphers.VignereActivity"
+            android:parentActivityName="com.julysfire.simpleciphers.MainActivity"
+            android:label="Vignere Cipher"/>
+        <activity android:name="com.julysfire.simpleciphers.AboutVignereActivity"
+            android:parentActivityName="com.julysfire.simpleciphers.VignereActivity"
+            android:label="About Vignere Cipher"/>
+
+        <activity android:name="com.julysfire.simpleciphers.HexDecimalBinaryActivity"
+            android:parentActivityName="com.julysfire.simpleciphers.MainActivity"
+            android:label="Hex/Decimal/Binary"/>
+        <activity android:name=".AboutHexDecimalBinary"
+            android:parentActivityName=".HexDecimalBinaryActivity"
+            android:label="About Hex/Decimal/Binary"/>
+
+        <activity android:name="com.julysfire.simpleciphers.TelephoneActivity"
+            android:parentActivityName="com.julysfire.simpleciphers.MainActivity"
+            android:label="Telephone Cipher"/>
+        <activity android:name=".AboutTelephoneActivity"
+            android:parentActivityName=".TelephoneActivity"
+            android:label="About Telephone Cipher"/>
+    </application>
+
+</manifest>

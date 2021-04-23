@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/aboutCaesarText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="The Caesar Cipher is a very old and one of the simplest forms of encryption.  It is said that Caesar of Rome was the first to use this type of cipher in order to encrypt his messages.  It uses a basic substitution based on the location of the letter within the alphabet as seen in Figure 1."
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:paddingTop="10dp"/>
+            <ImageView
+                android:id="@+id/alphabetImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/aboutCaesarText1"
+                android:src="@drawable/cipher" />
+            <TextView
+                android:id="@+id/figure1Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/alphabetImage"
+                android:text="Figure 1"/>
+
+            <TextView
+                android:id="@+id/longCaesarText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/figure1Text"
+                android:textSize="18dp"
+                android:paddingTop="5dp"
+                android:text="To begin, each letter is looked at in terms of it's position in the alphabet.  So given the text of 'AMZ', we first look at the letter 'A' that has a position of 1.  The number that is given when encrypting or decrypting is how many spaces are moved along the alphabet. Once at the end of the alphabet, we simply start over at the beginning." />
+            <TextView
+                android:id="@+id/caesarEncryptText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/longCaesarText"
+                android:text="Encrypting"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:paddingTop="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/caesarEncryptText2"
+                android:textSize="18dp"
+                android:layout_below="@+id/caesarEncryptText"
+                android:text="Using the text from the example (AMZ), if the number was 10, to encrypt the text, we move along the alphabet 10 spaces.  A (1) becomes K(11), M(13) becomes W(23) and Z (26) becomes J(10)."/>
+            <TextView
+                android:id="@+id/caesarDecryptText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/caesarEncryptText2"
+                android:text="Decrypting"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:paddingTop="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/caesarDecryptText2"
+                android:textSize="18dp"
+                android:layout_below="@+id/caesarDecryptText"
+                android:text="Decrypting is much the same as encrypting except the motions are done in reverse.  With an encrypted text of 'OPQ' and a number of 14, we go backwards in the alphabet and get 'ABC' (O being 15 and 15-14=1 to get A, p being 16, 16-14=2 to get b, and q being 17, 17-14=3, to get c)."
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/caesarMiscText"
+                android:text="Miscellaneous"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:paddingTop="10dp"
+                android:layout_below="@+id/caesarDecryptText2"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/caesarMiscText2"
+                android:layout_below="@id/caesarMiscText"
+                android:textSize="18dp"
+                android:text="Within the Caesar Cipher, numbers remain the same.  Capital letters will remain capitalized and lowercase letter will remain lowercase.  If you would like to learn more about the Casesar Cipher, feel free to click on the link below."/>
+            <TextView
+                android:id="@+id/linkCaesarText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/caesarMiscText2"
+                android:paddingTop="10dp"
+                android:textSize="18dp"
+                android:text="https://en.wikipedia.org/wiki/Caesar_cipher"
+                android:autoLink="web"/>
+        </RelativeLayout>
+    </ScrollView>
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_below="@+id/linkCaesarText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-4179709266227495/6118881575">
+    </com.google.android.gms.ads.AdView>
+</LinearLayout>

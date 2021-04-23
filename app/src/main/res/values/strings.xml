@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Learning Application</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="inputPrompt">Input Type</string>
+    <string name="outputPrompt">Output Type</string>
+
+    <string name="realAd">ca-app-pub-4179709266227495/6118881575</string>
+
+    <string-array name="inputTypes">
+        <item>Text</item>
+        <item>Hex</item>
+        <item>Decimal</item>
+        <item>Binary</item>
+    </string-array>
+
+    <string-array name="outputTypes">
+        <item>Text</item>
+        <item>Hex</item>
+        <item>Decimal</item>
+        <item>Binary</item>
+    </string-array>
+</resources>

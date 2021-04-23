@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:id="@+id/telephoneImage"
+                android:background="@drawable/telephone"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Encrypting and Decrypting"
+                android:textStyle="bold"
+                android:id="@+id/encryptingLabel"
+                android:layout_below="@id/telephoneImage"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:layout_below="@+id/encryptingLabel"
+                android:text="The telephone cipher is another simple cipher and people with who have used older telephones will understand immediately.  As you would guess by the name, the cipher has to do with the numbers and letters that are on the numbers on a phone.  For example, to get the letter A in your text message, you would have to press #2 just 1 time.  To get the letter B, you would have to press the #2 2 times.  So to encrypt the message 'akv', it would be 21 52 83.  The first number is the number where the letter is located and the second number is the amount of times that number needs to be pressed to get that letter.  It would be the opposite to decrypt: 92 43 32 22 would come to 'xieb'."/>
+        </RelativeLayout>
+    </ScrollView>
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/realAd">
+    </com.google.android.gms.ads.AdView>
+</LinearLayout>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.julysfire.simpleciphers.HexDecimalBinaryActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/inputString"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:textAlignment="center"
+                android:layout_below="@+id/textView"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:maxLength="1000"/>
+
+            <Spinner
+                android:layout_width="175dp"
+                android:layout_height="75dp"
+                android:id="@+id/inputType"
+                android:layout_below="@id/textView3"
+                android:layout_marginTop="25dp"
+                android:entries="@array/inputTypes"
+                android:prompt="@string/inputPrompt"
+                android:textAlignment="center">
+            </Spinner>
+
+            <Spinner
+                android:layout_width="175dp"
+                android:layout_height="75dp"
+                android:id="@+id/outputType"
+                android:layout_alignBaseline="@id/inputType"
+                android:layout_alignBottom="@id/inputType"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:entries="@array/outputTypes"
+                android:prompt="@string/outputPrompt"
+                android:textAlignment="center">
+            </Spinner>
+
+            <TextView
+                android:id="@+id/outputText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textIsSelectable="true"
+                android:background="@drawable/back"
+                android:textSize="19dp"
+                android:gravity="center"
+                android:layout_below="@+id/outputTextLabel"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/outputTextLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. Output"
+                android:textSize="15dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:layout_below="@+id/goButton"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="1. Enter the text that is to be encrypted or decypted."
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:text="2. Select your input and output types."
+                android:gravity="center"
+                android:layout_below="@+id/inputString"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="19dp" />
+
+            <TextView
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:gravity="center"
+                android:text="Input Type"
+                android:id="@+id/inputtypetext"
+                android:layout_below="@id/textView3"
+                android:layout_marginTop="5dp"/>
+            <TextView
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:gravity="center"
+                android:text="Output Type"
+                android:id="@+id/outputtypetext"
+                android:layout_alignBaseline="@id/inputtypetext"
+                android:layout_alignParentRight="true"/>
+            
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:id="@+id/goButton"
+                android:layout_below="@+id/inputType"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="13dp"
+                android:text="Encrypt/DECRYPT"/>
+            <Button
+                android:id="@+id/hexDecCopyButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="14dp"
+                android:text="Copy to clipboard"
+                android:layout_below="@id/outputText"
+                />
+        </RelativeLayout>
+    </ScrollView>
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        android:layout_below="@+id/hexDecCopyButton"
+        ads:adUnitId="@string/realAd">
+    </com.google.android.gms.ads.AdView>
+</LinearLayout>

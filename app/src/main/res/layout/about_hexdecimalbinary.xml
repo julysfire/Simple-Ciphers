@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="495dp"
+                android:id="@+id/hexdeccharimage"
+                android:background="@drawable/hexdecchar"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hexdeccharimage"
+                android:id="@+id/hexLabel"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="Hexadecimal"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/hexText"
+                android:textSize="18dp"
+                android:text="Hexadecimal is a Base 16 numbering system that uses a base of 0 through 9 and then 0 through 9 and A-F for each character (0-9 and then A-F is 2 different options, so 0123456789ABCDEF, hence Base-16).  The first number of the Hexadecimal number represents the first 4 digits of a binary number while the second number or letter represents the last 4 digits of a binary number (See below for more information on binary).  Please refer to the above chart to see which Hex characters go which each character and decimal equivilent.  For more information, feel free to click the link below."
+                android:layout_below="@+id/hexLabel"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="25dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/hexText"
+                android:textSize="18dp"
+                android:paddingTop="10dp"
+                android:id="@+id/hexadecmialLink"
+                android:text="https://en.wikipedia.org/wiki/Hexadecimal"
+                android:autoLink="web"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:id="@+id/decimalLabel"
+                android:text="Decimal"
+                android:layout_below="@+id/hexadecmialLink"
+                android:paddingTop="25dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:layout_below="@id/decimalLabel"
+                android:id="@+id/decimalText"
+                android:text="Decimal is a Base 10 numbering system that is most widely known and used. You have probably even used a system much like it without even have realizing it.  Unlike Hex, decimal only uses 0-9 (Hence the Base 10, 012345679) and essentially just assigns a number to each character.  Decimal is thought to be an ancient system due in part to the simplicity and ease of use.  Please refer to the above chart to see which Decimal value goes with each character and Hex character.  Both Hex and Decimal start in this space above 0.  Why you may ask?  0-32 and 0-20 in Hex do have representations but in this case, they represent functions such as backspace, cancel, escape, and tabs.  If you would like to learn more, feel free to click the link below."/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/decimalText"
+                android:textSize="18dp"
+                android:paddingTop="10dp"
+                android:id="@+id/decimalLink"
+                android:text="https://en.wikipedia.org/wiki/Decimal"
+                android:paddingBottom="25dp"
+                android:autoLink="web"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:id="@+id/binaryLabel"
+                android:text="Binary"
+                android:layout_below="@+id/decimalLink"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:id="@+id/binaryText"
+                android:text="Originally devised by Gotterfried Leibniz in 1679, Binary can still be see and referenced today.  Binary may seem like it will be the hardest to understand, but it is only a Base 2 system (Only 2 numbers to remember: 0 and 1).  To represent any character, the numbers are arranged in sets of 8.  When it comes to computting, these remember logic gates (or yes/no options).  Each digit in the binary number also represents a number that is used to convert it into a decimal that is used to convert to a character.  Starting from the far right number, it starts at 1 and doubles every time.  From right to left: 1, 2, 4, 8, 16, 32, 64, 128. Remember, that is in the right to left order, it needs to be reversed for the way we read it (left to right).  See the below image for an example."
+                android:layout_below="@id/binaryLabel"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/binaryimage2"
+                android:layout_below="@id/binaryText"
+                android:background="@drawable/binary"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/binarytext2"
+                android:textSize="18dp"
+                android:text="Converting to Hex is just as easy as decimal conversion.  We must break down the two different Base-16 characters and then make a 4 digit binary number of it.  The reason we only use 4 binary digits is because we only need 16 available options.  9 in Hex would be 0101 in binary, E in binary would be 1110.  To get the full Hex of 9E, we simply put the two sets of 4 togehter, so 01011110.  If you are intersted in learning more about binary, feel free to click the link below."
+                android:layout_below="@id/binaryimage2"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:id="@+id/binarylink"
+                android:layout_below="@id/binarytext2"
+                android:paddingTop="10dp"
+                android:text="https://en.wikipedia.org/wiki/Binary_number"
+                android:autoLink="web"/>
+        </RelativeLayout>
+    </ScrollView>
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_below="@+id/binarylink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-4179709266227495/6118881575"/>
+</LinearLayout>
